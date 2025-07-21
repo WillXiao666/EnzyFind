@@ -5,6 +5,7 @@ EnzyFinder
 Description
 -----------
 EnzyFinder is a lightweight tool for chemical biology and metabolic engineering that helps you to quickly find candidate enzymes from “small molecules” that are likely to be associated with their reactions.
+
 All you need to do is enter a small molecule (SMILES) and the enzyme (sequence) to be screened, and EnzyFinder will automatically predict which enzymes will catalyze the reaction of interest and generate a list of candidate enzymes!
 
 
