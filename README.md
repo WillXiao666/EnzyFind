@@ -39,25 +39,18 @@ Installation
 ------------
 
 1. Clone this Git repository.
-1. Create a Python environment and install a compatible version of Python, for example with [Conda](https://conda.io/projects/conda/en/latest/index.html) (other virtual environments like Docker, pyenv, or the system package manager work too).
+1. Create a Python environment and install a compatible version of Python, for example with [Conda](https://conda.io/projects/conda/en/latest/index.html)
     ```shell
-    conda create --name EnzyFinder python=3.8
+    conda env create -f environment.yml
     conda activate EnzyFinder
-    ```
-1. Change directory to the repository and install all dependencies.  You will need to set the right processor type, see [PyTorch versions](https://pytorch.org/get-started/locally/). Linux supports CUDA (e.g. "cu124"), ROCm (e.g. "rocm6.2.4")  and CPU. Windows supports CUDA and CPU.  MacOSX only supports CPU (use "mac" as processor type!). Optionally, you can select dependencies "openeye" (for ROCS; you need to obtain your own license), "isim" for similarity tracking in TensorBoard or "none" to skip all.  The default is installation of "all" dependencies.  See the help text from the install script for details.
-    ```shell
-    python install.py --help
-    python install.py cu124  # or rocm6.2.4, cpu, mac, etc.
-    ```
-1. Test the tool. The installer has added a script `reinvent` to your PATH.
-    ```shell
-    reinvent --help
     ```
 
 Prior models
 ------------
 
 All public prior models can be found on [Zenodo](https://doi.org/10.5281/zenodo.15641296
+        
+        
         
         ).
 
