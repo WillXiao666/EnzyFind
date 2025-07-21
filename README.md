@@ -4,35 +4,24 @@ EnzyFinder
 
 Description
 -----------
+
 EnzyFinder is a lightweight tool for chemical biology and metabolic engineering that helps you to quickly find candidate enzymes from “small molecules” that are likely to be associated with their reactions.
 
 All you need to do is enter a small molecule (SMILES) and the enzyme (sequence) to be screened, and EnzyFinder will automatically predict which enzymes will catalyze the reaction of interest and generate a list of candidate enzymes!
 
 
 
-
-
 Requirements
 ------------
 
-REINVENT is being developed on Linux and supports both GPU and CPU.  The Linux
-version is fully validated.  REINVENT on Windows supports GPU and CPU while
-MacOSX supports CPU only, but both platforms are only partially tested and
-therefore support is limited.
+EnzyFinder is developed on Linux and supports both GPUs and CPUs. The Linux version has been fully validated. REINVENT on Windows supports both GPUs and CPUs, but both platforms have only been partially tested, so support is limited.
 
-The code is written in Python 3 (>= 3.10).  The list of
-dependencies can be found in the repository (see also Installation below).
+The code is written in Python 3 (>= 3.8). A list of dependencies can be found in the repositories (see also Installation below).
 
-A GPU is not strictly necessary but strongly recommended for performance
-reasons especially for transfer learning and model training.  Reinforcement
-learning (RL) requires the computation of scores where most scoring
-components run on the CPU.  Thus, a GPU is less important for RL (depending
-on how much time is spent on the CPU).
+A GPU is not absolutely necessary, but is highly recommended for performance reasons, especially if you want to retrain the model.
 
-Note that if no GPU is installed in your computer the code will run on the
-CPU automatically.  REINVENT [supports](https://pytorch.org/get-started/locally/) NVIDIA GPUs and also some AMD GPUs.
-For most design tasks a memory of about 8 GiB for both CPU main memory and
-GPU memory is sufficient.
+Please note that if your computer does not have a GPU installed, the code will automatically run on the 
+CPU.
 
 
 Installation
