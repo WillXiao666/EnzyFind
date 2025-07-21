@@ -1,0 +1,26 @@
+name: EnzyFinder
+channels:
+  - pytorch         
+  - conda-forge
+  - rdkit
+  - defaults
+dependencies:
+  - python=3.8
+  - pip                
+  - pandas
+  - py-xgboost      
+  - rdkit
+  - numpy
+  - jupyter
+  - matplotlib
+  - scikit-learn
+  
+  - pip:
+      - torch
+      - tensorflow
+      - unimol_tools              
+      - huggingface_hub
+      - fair-esm
+      - hyperopt
+      - biopython
+
