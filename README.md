@@ -42,7 +42,7 @@ Installation
 1. Create a Python environment and install a compatible version of Python, for example with [Conda](https://conda.io/projects/conda/en/latest/index.html)
     ```shell
     conda env create -f environment.yml
-    conda activate EnzyFinder
+    conda activate EnzyFind
     ```
 
 Basic Usage
