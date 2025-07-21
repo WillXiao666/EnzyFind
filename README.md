@@ -17,7 +17,7 @@ EnzyFinder is developed on Linux and supports both GPUs and CPUs. The Linux vers
 
 The code is written in Python 3 (>= 3.8). A list of dependencies can be found in the repositories (see also Installation below).
 
-The code was implemented and tested on linux with the following packages and versions.
+The code was implemented and tested on linux with the following packages.
 - python 
 - jupyter
 - pandas 
