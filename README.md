@@ -10,18 +10,29 @@ EnzyFinder is a lightweight tool for chemical biology and metabolic engineering 
 All you need to do is enter a small molecule (SMILES) and the enzyme (sequence) to be screened, and EnzyFinder will automatically predict which enzymes will catalyze the reaction of interest and generate a list of candidate enzymes!
 
 
-
 Requirements
 ------------
 
-EnzyFinder is developed on Linux and supports both GPUs and CPUs. The Linux version has been fully validated. REINVENT on Windows supports both GPUs and CPUs, but both platforms have only been partially tested, so support is limited.
+EnzyFinder is developed on Linux and supports both GPUs and CPUs. The Linux version has been fully validated. EnzyFinder on Windows supports both GPUs and CPUs, but windous  have only been partially tested, so support is limited.
 
 The code is written in Python 3 (>= 3.8). A list of dependencies can be found in the repositories (see also Installation below).
 
-A GPU is not absolutely necessary, but is highly recommended for performance reasons, especially if you want to retrain the model.
-
-Please note that if your computer does not have a GPU installed, the code will automatically run on the 
-CPU.
+The code was implemented and tested on linux with the following packages and versions.
+- python 3.8
+- jupyter
+- pandas 
+- torch 
+- numpy 
+- rdkit
+- unimol_tools
+- fair-esm 
+- py-xgboost 
+- matplotlib 
+- hyperopt 
+- sklearn 
+- pickle
+- Bio 
+- re 
 
 
 Installation
@@ -30,8 +41,8 @@ Installation
 1. Clone this Git repository.
 1. Create a Python environment and install a compatible version of Python, for example with [Conda](https://conda.io/projects/conda/en/latest/index.html) (other virtual environments like Docker, pyenv, or the system package manager work too).
     ```shell
-    conda create --name reinvent4 python=3.10
-    conda activate reinvent4
+    conda create --name EnzyFinder python=3.8
+    conda activate EnzyFinder
     ```
 1. Change directory to the repository and install all dependencies.  You will need to set the right processor type, see [PyTorch versions](https://pytorch.org/get-started/locally/). Linux supports CUDA (e.g. "cu124"), ROCm (e.g. "rocm6.2.4")  and CPU. Windows supports CUDA and CPU.  MacOSX only supports CPU (use "mac" as processor type!). Optionally, you can select dependencies "openeye" (for ROCS; you need to obtain your own license), "isim" for similarity tracking in TensorBoard or "none" to skip all.  The default is installation of "all" dependencies.  See the help text from the install script for details.
     ```shell
@@ -46,7 +57,9 @@ Installation
 Prior models
 ------------
 
-All public prior models can be found on [Zenodo](https://doi.org/10.5281/zenodo.15641296).
+All public prior models can be found on [Zenodo](https://doi.org/10.5281/zenodo.15641296
+        
+        ).
 
 
 Basic Usage
