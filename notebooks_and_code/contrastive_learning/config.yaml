@@ -1,0 +1,38 @@
+# Configuration file for ConPLex-style contrastive learning
+
+# Data settings
+data_dir: "../data"  # Path to EnzyFind data directory
+val_split: 0.2       # Validation split ratio
+random_seed: 42      # Random seed for reproducibility
+
+# Model architecture
+model:
+  latent_dim: 128              # Dimension of shared latent space
+  hidden_dims: [256, 128]      # Hidden layer dimensions for MLPs
+  dropout_rate: 0.2            # Dropout rate
+  activation: "relu"           # Activation function (relu, gelu, tanh)
+
+# Training settings
+training:
+  batch_size: 32                # Batch size
+  learning_rate: 0.001          # Learning rate
+  weight_decay: 0.0001          # Weight decay for optimizer
+  
+  # Loss weights
+  classification_weight: 1.0    # Weight for classification loss
+  contrastive_weight: 1.0       # Weight for contrastive loss
+  margin: 1.0                   # Initial margin for triplet loss
+  margin_decay: 0.95            # Margin decay factor per epoch
+  
+  # Training stages
+  classification_epochs: 10     # Epochs for classification stage
+  contrastive_epochs: 20        # Epochs for contrastive stage
+  patience: 5                   # Early stopping patience
+
+# Logging and monitoring
+use_wandb: false               # Use Weights & Biases for logging
+wandb_project: "enzyfind-contrastive"  # W&B project name
+
+# Data augmentation and sampling
+negative_sampling_ratio: 5     # Number of negatives per positive for contrastive learning
+balanced_batches: true         # Use balanced positive/negative batches
